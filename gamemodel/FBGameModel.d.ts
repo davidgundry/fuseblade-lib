@@ -10,7 +10,8 @@ export declare class FBGameModel extends SimultanousGameModel<FBScenarioData, FB
     applyCommands(data: FBScenarioData, commands: FBCommand[], delta: number): void;
     private _agentActions;
     private _doStateUpdate;
-    private _updateInfluence;
+    private _sortNumber;
+    private _removeProjectile;
     private _updateAgent;
     goalTest(data: FBScenarioData): boolean;
 }

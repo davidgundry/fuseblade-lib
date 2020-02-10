@@ -3,6 +3,7 @@ import { GameModel, SimultanousGameModel, TurnBasedGameModel } from "./GameModel
 import { ScenarioData, TurnBasedScenarioData } from "gameserver/ScenarioData";
 import { ClientConnection } from "./client/ClientConnection";
 import { AIClient } from "./client/AIClient";
+import { LocalServerConnection } from "./client/LocalServerConnection";
 export declare abstract class Scenario<G extends GameModel<D, S, C>, D extends ScenarioData<S>, S, C> {
     private _gameModel;
     private _data;
@@ -22,6 +23,7 @@ export declare abstract class Scenario<G extends GameModel<D, S, C>, D extends S
     getSaveData(): S;
     addClient(client: ClientConnection<D, S, C>): boolean;
     addAITeam(ai: AIClient<D, S, C>): void;
+    addLocalClient(connection: LocalServerConnection<C>): boolean;
     runHeadless(): boolean;
 }
 export declare class TurnBasedScenario<G extends TurnBasedGameModel<D, S, C>, D extends TurnBasedScenarioData<S>, S, C> extends Scenario<G, D, S, C> {

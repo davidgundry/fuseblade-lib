@@ -9,7 +9,7 @@ export declare abstract class ClientConnection<D extends ScenarioData<S>, S, C> 
     readonly teamID: number;
     private _isObserver;
     abstract sendDataUpdate(data: D): void;
-    abstract grabCommands(commandFactory: CommandFactory<C>): Command<C>[] | Command<C>;
+    abstract grabCommands(commandFactory: CommandFactory<C>, delta: number): Command<C>[] | Command<C>;
     abstract createScenario(data: D, gameModel: GameModel<D, S, C>): void;
     constructor(clientID: number, teamID: number);
     get isObserver(): boolean;
@@ -18,10 +18,10 @@ export declare abstract class ClientConnection<D extends ScenarioData<S>, S, C> 
 export declare class LocalClientConnection<D extends ScenarioData<S>, S, C> extends ClientConnection<D, S, C> {
     private _local;
     protected _commandsBuffer: Command<C>[];
-    constructor(clientID: number, teamID: number, client: LocalServerConnection);
+    constructor(clientID: number, teamID: number, client: LocalServerConnection<C>);
     createScenario(data: D, gameModel: GameModel<D, S, C>): void;
     sendDataUpdate(data: D): void;
-    grabCommands(commandFactory: CommandFactory<C>): Command<C> | Command<C>[];
+    grabCommands(commandFactory: CommandFactory<C>, delta: number): Command<C> | Command<C>[];
     recieveCommand(command: Command<C>): void;
 }
 export declare class AIClientConnection<D extends ScenarioData<S>, S, C> extends ClientConnection<D, S, C> {
@@ -30,5 +30,5 @@ export declare class AIClientConnection<D extends ScenarioData<S>, S, C> extends
     constructor(clientID: number, teamID: number, client: AIClient<D, S, C>);
     createScenario(data: D, gameModel: GameModel<D, S, C>): void;
     sendDataUpdate(data: D): void;
-    grabCommands(commandFactory: CommandFactory<C>): Command<C> | Command<C>[];
+    grabCommands(commandFactory: CommandFactory<C>, delta: any): Command<C> | Command<C>[];
 }

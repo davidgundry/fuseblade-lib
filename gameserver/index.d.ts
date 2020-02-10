@@ -1,3 +1,5 @@
+import { ScenarioFactory } from "gameserver/ScenarioFactory";
+export default ScenarioFactory;
 export { Command } from "./Command";
 export { CommandFactory } from "./CommandFactory";
 export { GameModel } from "./GameModel";
@@ -5,8 +7,6 @@ export { LocalPlayServer } from "./LocalPlayServer";
 export { NodeServer } from "./NodeServer";
 export { Scenario } from "./Scenario";
 export { ScenarioData } from "./ScenarioData";
-import { ScenarioFactory } from "gameserver/ScenarioFactory";
-export default ScenarioFactory;
 export { AIClientConnection } from "./client/ClientConnection";
 export { AIClient } from "./client/AIClient";
 export { ClientConnection } from "./client/ClientConnection";

@@ -17,6 +17,6 @@ export declare class ClientController<D extends ScenarioData<S>, S, C> {
     setObserver(i: number, observer: boolean): void;
     createScenario(data: D, gameModel: GameModel<D, S, C>): void;
     sendDataUpdate(data: D, clientToAct?: number): void;
-    getCommands(): Command<C>[];
-    getCommandsOfClient(clientIndex: number): Command<C> | Command<C>[];
+    getCommands(delta: number): Command<C>[];
+    getCommandsOfClient(clientIndex: number, delta: number): Command<C> | Command<C>[];
 }

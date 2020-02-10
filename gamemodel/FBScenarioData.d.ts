@@ -2,19 +2,22 @@ import { FBSaveData } from "./FBSaveData";
 import { TeamData } from "./TeamData";
 import { AgentData } from "./AgentData";
 import { ScenarioData } from "gameserver/ScenarioData";
-export declare enum WallType {
-    None = 0,
-    Low = 1,
-    High = 2
+import ProjectileData from "./ProjectileData";
+export declare enum FloorType {
+    Floor = 0,
+    Void = 1
 }
 export declare class FBScenarioData implements ScenarioData<FBSaveData> {
     teams: TeamData[];
-    map: WallType[][];
-    influence: number[][][];
-    agents: AgentData[][];
-    agentsLength: number[];
+    map: FloorType[][];
+    sortedAgents: AgentData[];
+    projectiles: ProjectileData[];
+    projectilesLength: number;
+    maxAgentsPerTeam: number;
+    maxProjectiles: number;
     cloneFrom(source: FBScenarioData): void;
     clients(): number;
     load(saveData: FBSaveData): void;
     save(): FBSaveData;
+    sortAgents(): void;
 }
