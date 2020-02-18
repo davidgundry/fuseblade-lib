@@ -1,5 +1,5 @@
 import { FBScenarioData } from "./FBScenarioData";
 export declare class AgentModel {
-    private _data;
-    constructor(data: FBScenarioData);
+    updateAgents(data: FBScenarioData, delta: number): void;
+    private _updateAgent;
 }

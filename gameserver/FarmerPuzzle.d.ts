@@ -43,6 +43,7 @@ export declare class FPCommandFactory implements CommandFactory<FPActions> {
     setTeam(teamID: number): void;
     getCommandList(): number[];
     getCommand(c: number): Command<FPActions>;
+    resetCommandPool(): void;
 }
 export declare class FPScenario extends TurnBasedScenario<FPModel, FPState, FPSave, FPActions> {
     constructor();

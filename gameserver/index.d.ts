@@ -1,4 +1,4 @@
-import { ScenarioFactory } from "gameserver/ScenarioFactory";
+import { ScenarioFactory } from "./ScenarioFactory";
 export default ScenarioFactory;
 export { Command } from "./Command";
 export { CommandFactory } from "./CommandFactory";

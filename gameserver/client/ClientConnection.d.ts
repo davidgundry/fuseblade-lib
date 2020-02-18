@@ -3,7 +3,7 @@ import { AIClient } from "./AIClient";
 import { ScenarioData } from "gameserver/ScenarioData";
 import { CommandFactory } from "gameserver/CommandFactory";
 import { GameModel } from "gameserver/GameModel";
-import { LocalServerConnection } from "gameserver/client/LocalServerConnection";
+import { LocalServerConnection } from "./LocalServerConnection";
 export declare abstract class ClientConnection<D extends ScenarioData<S>, S, C> {
     readonly clientID: number;
     readonly teamID: number;

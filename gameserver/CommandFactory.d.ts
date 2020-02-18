@@ -4,4 +4,5 @@ export interface CommandFactory<C> {
     setTeam(teamID: number): void;
     getCommandList(): number[];
     getCommand(command: number): Command<C>;
+    resetCommandPool(): any;
 }

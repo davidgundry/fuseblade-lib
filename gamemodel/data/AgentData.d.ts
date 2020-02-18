@@ -1,4 +1,5 @@
-import { Drawable, DrawableType } from "./FBScenarioData";
+import { Drawable, DrawableType } from "./Drawable";
+import { AgentSave } from "gamemodel/save/AgentSave";
 export declare class AgentData implements Drawable {
     team: number;
     inUse: boolean;
@@ -18,18 +19,5 @@ export declare class AgentData implements Drawable {
     getType(): DrawableType;
     getWidth(): number;
     getHeight(): number;
-    load(save: AgentSaveData): void;
-}
-export declare class AgentSaveData {
-    team: number;
-    inUse: boolean;
-    x: number;
-    y: number;
-    z: number;
-    velocityX: number;
-    velocityY: number;
-    speed: number;
-    health: number;
-    maxHealth: number;
-    collideRadius: number;
+    load(save: AgentSave, team: number): void;
 }

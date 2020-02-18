@@ -1,4 +1,4 @@
-import { Drawable, DrawableType } from "./FBScenarioData";
+import { Drawable, DrawableType } from "./Drawable";
 export default class ProjectileData implements Drawable {
     x: number;
     y: number;

@@ -1,8 +1,8 @@
 import { SimultanousGameModel } from "gameserver/GameModel";
-import { FBScenarioData } from "./FBScenarioData";
-import { FBSaveData } from "./FBSaveData";
-import { FBActions } from "./FBActions";
-import { FBCommand } from "./FBCommand";
+import { FBScenarioData } from "../data/FBScenarioData";
+import { FBSaveData } from "../save/FBSaveData";
+import { FBActions } from "../FBActions";
+import { FBCommand } from "../FBCommand";
 import { AgentModel } from "./AgentModel";
 import { CommandModel } from "./CommandModel";
 import { ProjectileModel } from "./ProjectileModel";
