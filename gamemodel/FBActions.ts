@@ -1,4 +1,4 @@
-export declare enum FBActions {
+export enum FBActions {
     AgentMoveNorth = 0,
     AgentMoveSouth = 1,
     AgentMoveEast = 2,

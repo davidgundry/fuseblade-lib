@@ -3,38 +3,23 @@ let defaultSaveData =
     maxProjectiles: 100,
     teams: [
         {
-            maxAgents: 2,
+            maxAgents: 1,
             agents: [{
                 x: 7.5, y: 3.5, z: 0,
                 collideRadius: 0.5,
                 health: 10,
-                speed: 5,
-                maxHealth: 10,
-            },
-            {
-                collideRadius: 0.5,
-                x: 4, y: 12, z: 0, 
-                health: 10,
-                speed: 5,
+                speed: 2,
                 maxHealth: 10,
             }]
         },
         {
-            maxAgents: 2,
+            maxAgents: 1,
             agents: [
                 {
                     x: 13, y: 3, z: 0,
                     collideRadius: 0.5,
                     health: 10,
-                    speed: 5,
-                    maxHealth: 10,
-                },
-                {
-                    
-                    x: 13, y: 13, z: 0, 
-                    collideRadius: 0.5,
-                    health: 10,
-                    speed: 5,
+                    speed: 2,
                     maxHealth: 10,
                 }]
         },
